@@ -878,7 +878,7 @@ class BDSim:
                     # record the ports on the watchlist
                     for i, p in enumerate(simstate.watchlist):
                         b = p.block
-                        out = b.output(integrator.t, b.inputs, b._x)[p.port]
+                        out = b.output(t, b.inputs, b._x)[p.port]
                         simstate.plist[i].append(out)
 
                     # update all blocks that need to know
@@ -915,7 +915,7 @@ class BDSim:
                 # record the ports on the watchlist
                 for i, p in enumerate(simstate.watchlist):
                     b = p.block
-                    out = b.output(integrator.t, b.inputs, b._x)[p.port]
+                    out = b.output(t, b.inputs, b._x)[p.port]
                     simstate.plist[i].append(out)
 
                 # update all blocks that need to know
